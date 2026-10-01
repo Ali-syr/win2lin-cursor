@@ -38,7 +38,7 @@ Ensure you have the following system dependencies installed on your Linux distri
 - **libxcursor**
 - **ImageMagick**
 
-### Installing System Dependencies
+### Dependencies
 ```bash
 libxcursor
 imagemagick
