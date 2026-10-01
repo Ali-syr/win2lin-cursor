@@ -175,11 +175,11 @@ def setup_interactive_config():
         print("     Detected directories in project path:")
         for idx, d in enumerate(available_dirs, 1):
             print(f"       {idx}. {d.name}")
-        print("       A. Process All Detected Folders (Process 'ani' & 'cur' simultaneously)")
+        print("       3. Process All Detected Folders (Process 'ani' & 'cur' simultaneously)")
         
-        choice = input(f"\n  Select option [1-{len(available_dirs)} / A] (Default: A): ").strip().upper()
+        choice = input(f"\n  Select option [1-{len(available_dirs)} / 3] (Default: 3): ").strip().upper()
         
-        if choice == "A" or not choice:
+        if choice == "3" or not choice:
             source_paths = available_dirs
         elif choice.isdigit() and 1 <= int(choice) <= len(available_dirs):
             source_paths = [available_dirs[int(choice) - 1]]
