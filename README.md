@@ -25,16 +25,13 @@ win2lin-cursor/
 └── YourThemeName/          <-- Generated Theme Folder
 ```
 
-## Prerequisites
+## Prerequisites & Dependencies
 
-Ensure you have the following system dependencies installed on your Linux distribution before running the converter:
+Ensure you have the following system dependencies installed and library win2xcur on your Linux distribution before running the converter:
 
-- **Python 3.8+**
-- **libxcursor**
-- **ImageMagick**
-
-### Dependencies
 ```bash
+Python 3.8+
+win2xcur
 libxcursor
 imagemagick
 ```
