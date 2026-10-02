@@ -15,7 +15,7 @@ Interactive Python tool for seamlessly converting Windows cursor packages (`.ani
 ---
 
 ```plainttext
-.
+
 win2lin-cursor/
 ├── convert.py
 ├── .gitignore
