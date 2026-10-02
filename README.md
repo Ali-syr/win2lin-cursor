@@ -23,11 +23,6 @@ win2lin-cursor/
 ├── ani/
 ├── cur/
 └── YourThemeName/          <-- Generated Theme Folder
-    ├── index.theme
-    └── cursors/
-        ├── Normal
-        ├── Help
-        └── ... (and symlinks)
 ```
 
 ## Prerequisites
