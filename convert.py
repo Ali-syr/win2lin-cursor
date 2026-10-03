@@ -254,6 +254,7 @@ def main():
 
     for file_path in all_files:
         fname = file_path.name
+        stem = file_path.stem  
         input_target = file_path
 
         hx, hy = CUR_FILES_HOTSPOTS.get(fname, (0, 0))
@@ -266,12 +267,16 @@ def main():
             cmd.extend(["--scale", str(scale_factor)])
 
         res = subprocess.run(cmd, capture_output=True, text=True)
+        output_file = cursors_dir / stem
+        has_error = bool(res.stderr.strip())
+        file_created = output_file.exists()
 
-        if res.returncode == 0:
+        if not has_error and file_created:
             print(f"  [OK] {fname}")
             success += 1
         else:
-            print(f"  [FAIL] {fname}: {res.stderr.strip()}")
+            error_detail = res.stderr.strip() or (f"output file '{stem}' not created" if not file_created else "unknown error")
+            print(f"  [FAIL] {fname}: {error_detail}")
             failed += 1
 
     print("\n[+] Generating Xcursor symlinks...")
