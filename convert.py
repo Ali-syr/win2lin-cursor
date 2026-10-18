@@ -142,12 +142,18 @@ def fix_ico_header_to_cur(input_path: Path, output_path: Path, hx: int = 0, hy: 
 def create_symlinks(cursors_dir: Path):
     """Create Xcursor alias symlinks for Linux desktop compatibility."""
     for alias, target in CURSOR_MAP.items():
+        if alias == target:
+            continue
+
         target_path = cursors_dir / target
         alias_path = cursors_dir / alias
 
         if target_path.exists():
-            if alias_path.exists() or alias_path.is_symlink():
+            if alias_path.is_symlink():
                 alias_path.unlink()
+            elif alias_path.exists() and alias_path != target_path:
+                alias_path.unlink()
+                
             alias_path.symlink_to(target)
 
 def setup_interactive_config():
