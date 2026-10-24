@@ -9,7 +9,7 @@ Interactive Python tool for seamlessly converting Windows cursor packages (`.ani
 - **Interactive CLI Setup**: Dynamically configure theme output names and scale factors.
 - **Auto-Detection**: Automatically detects and processes `ani/` and `cur/` directories simultaneously.
 - **ICO Header Fixer**: Patches invalid ICO headers (type 1 to type 2) and injects accurate hotspots for problematic `.cur` files.
-- **Xcursor Symlink Generator**: Automatically generates comprehensive cursor aliases for GTK, Qt, and Linux window manager compatibility.
+- **Xcursor Symlink Generator**: Automatically generates comprehensive cursor aliases for GTK, Qt.
 - **Index Theme Creation**: Automatically generates a valid `index.theme` manifest file.
 
 ---
