@@ -1,0 +1,37 @@
+# Win2Lin Cursor Converter
+
+Interactive Python tool for seamlessly converting Windows cursor packages (`.ani` and `.cur`) into Linux Xcursor format. Designed with modularity.
+
+---
+
+## Features
+
+- **Interactive CLI Setup**: Dynamically configure theme output names and scale factors.
+- **Auto-Detection**: Automatically detects and processes `ani/` and `cur/` directories simultaneously.
+- **ICO Header Fixer**: Patches invalid ICO headers (type 1 to type 2) and injects accurate hotspots for problematic `.cur` files.
+- **Xcursor Symlink Generator**: Automatically generates comprehensive cursor aliases for GTK, Qt.
+- **Index Theme Creation**: Automatically generates a valid `index.theme` manifest file.
+
+---
+
+```plainttext
+
+win2lin-cursor/
+├── convert.py
+├── .gitignore
+├── venv/
+├── ani/
+├── cur/
+└── YourThemeName/          <-- Generated Theme Folder
+```
+
+## Prerequisites & Dependencies
+
+Ensure you have the following system dependencies installed and library win2xcur on your Linux distribution before running the converter:
+
+```bash
+Python 3.8+
+win2xcur
+libxcursor
+imagemagick
+```
