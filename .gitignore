@@ -1,0 +1,10 @@
+# Virtual Environment Python
+venv/
+.venv/
+
+# tmp dir
+_fixed_tmp/
+
+# Cache Python
+__pycache__/
+*.py[cod]
