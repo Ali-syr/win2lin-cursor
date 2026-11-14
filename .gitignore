@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Script temporary files & logs
+_fixed_tmp/
+*.log
